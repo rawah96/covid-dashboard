@@ -1,0 +1,32 @@
+.test {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.table {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    align-items: center;
+    height: 400px;
+    overflow: scroll;
+    color: grey;
+}
+
+.table > tr {
+    padding: 40px;
+}
+
+.table > td {
+    padding: 50px !important;
+}
+
+.table tr:nth-of-type(odd) {
+    background-color:#f3f2f8;
+}
+
+.th {
+    display: grid;
+    place-items: center;
+}
