@@ -1,0 +1,13 @@
+/* 
+    space-between: pushes out space as much as it can
+    padding: adds space inside element/container
+    margin: outside
+*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    background-color:grey;
+}
