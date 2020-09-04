@@ -1,15 +1,32 @@
 .info-box {
+    width: 100px !important;
+    height: 100px;
+    padding:45px;
+    margin: 19px;
+    transition: transform .2s;
+}
 
+.info-box:hover {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); 
+    cursor: pointer;
 }
 
 .box-title {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .box-cases {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .box-total {
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import './Stats.css'
 import {Card, CardContent, Typography} from '@material-ui/core';
+import Line from '../Charts/LineChart';
 
 function Stats({title, dailyCases, total}) {
     return (
@@ -11,7 +12,6 @@ function Stats({title, dailyCases, total}) {
                         {title}
                     </Typography>
                     <h2 className="box-cases">{dailyCases}</h2>
-                    <Typography color="primary" className="box-total">{total} Total</Typography>
                 </CardContent>
             </Card>
         </div>

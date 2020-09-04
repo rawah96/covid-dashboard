@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import './Header.css'
-import {FormControl, MenuItem, Select} from '@material-ui/core' 
+import {FormControl, MenuItem, Select, CardContent, Card} from '@material-ui/core' 
 import virus from './virus.svg';
 import mask from './mask.svg'
 import Stats from '../Stats/Stats'
+import Table from '../Table/Table'
+import Line from '../Charts/LineChart'
 // will animate the svgs
 
 function Header() {
@@ -60,8 +62,9 @@ function Header() {
     return (
         <>
         <div className="header">
-            <h2>COVID-19</h2>
-            <div className="logo"><img src={virus} width="5%"/> <img src={mask} width="5%"/></div>
+            <div className="logo">
+                <h2>COVID-19</h2>
+                <img src={virus} width="6%"/> <img src={mask} width="6%"/></div>
             <FormControl className="app-dropdown">
             <Select
             variant="outlined"
@@ -78,20 +81,25 @@ function Header() {
         </div>
         <div className="app-stats">
             <Stats 
-            title="Cases"
+            title="Current"
             dailyCases={countryInfo.todayCases} 
-            total={countryInfo.cases}/>
+            //total={countryInfo.cases}
+            />
             <Stats 
             title="Recovered"
             dailyCases={countryInfo.todayRecovered}
-            total={countryInfo.recovered}
+            //total={countryInfo.recovered}
             />
             <Stats 
             title="Deaths"
             dailyCases={countryInfo.todayDeaths}
-            total={countryInfo.deaths}
-            />
+            //total={countryInfo.deaths}
+            />            
+            <Table />
         </div>
+        <div className="line-chart">
+                <Line />
+        </div >
         </>
     )
 }

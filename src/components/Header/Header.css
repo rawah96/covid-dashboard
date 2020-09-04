@@ -11,6 +11,25 @@
 }
 
 @media (max-width:990px) {
-    .header {
-    }
+
+}
+
+.app-dropdown {
+    width: 50vw;
+}
+
+.logo {
+    display: flex;
+    justify-items: center;
+}
+
+.logo > h2 {
+    margin:20px;
+    font-size: 35px;
+}
+
+.line-chart {
+    position: relative;
+    bottom:220px;
+    left: 45px;
 }
