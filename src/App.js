@@ -7,7 +7,9 @@ import { Card, CardContent } from '@material-ui/core';
 import Table from './components/Table/Table'
 import LineChart from './components/Charts/LineChart'
 import Worldmap from './components/Worldmap/Worldmap'
+import "leaflet/dist/leaflet.css"
 function App() {
+
   return (
     <div className="app">
 
@@ -22,7 +24,6 @@ function App() {
           <Map />
         </CardContent>
       </Card>
-      <Worldmap />
       {/* sidebar with table option - dev and contact & social media icons */}
 
     </div>

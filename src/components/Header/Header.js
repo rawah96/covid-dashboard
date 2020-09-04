@@ -6,11 +6,13 @@ import mask from './mask.svg'
 import Stats from '../Stats/Stats'
 import Table from '../Table/Table'
 import Line from '../Charts/LineChart'
+import Worldmap from '../Worldmap/Worldmap'
 // will animate the svgs
 
 function Header() {
     // state = variable in react.. 
     const [countries, setCountries] = useState([]);
+    const [mapCountries, setMapCountries] = useState([]);
     // end point = https://disease.sh/v3/covid-19/countries
     // useEffect => runs a piece of code based on a given condition
     useEffect(() => {
@@ -29,6 +31,7 @@ function Header() {
                     value: country.countryInfo.iso2
                 }));
                 setCountries(countries);
+                setMapCountries(data)
             });
         }
         // call the function
@@ -38,6 +41,10 @@ function Header() {
     // to remember which one we selected
     const [country, setCountry] = useState('worldwide');
     const [countryInfo, setCountryInfo] = useState({});
+
+    const [center, setCenter] = useState({lat: 34.80746, lng:-40.4796});
+    const [zoom, setZoom] = useState(3);
+
 
     const  onCountryChange = async (e) => {
         const code = e.target.value; 
@@ -51,6 +58,8 @@ function Header() {
         .then(data => {
             setCountry(code)
             setCountryInfo(data);
+            setCenter([data.countryInfo.lat, data.countryInfo.long]);
+            setZoom(4);
         })
     }
 
@@ -58,7 +67,9 @@ function Header() {
         fetch('https://disease.sh/v3/covid-19/all')
         .then(res => res.json())
         .then(data => setCountryInfo(data))
-    },[])
+    },[]);
+
+
     return (
         <>
         <div className="header">
@@ -100,6 +111,11 @@ function Header() {
         <div className="line-chart">
                 <Line />
         </div >
+
+        <Worldmap 
+        countries={mapCountries}
+        center={center} 
+        zoom={zoom}/>
         </>
     )
 }
