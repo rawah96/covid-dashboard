@@ -47,6 +47,7 @@ function Header() {
 
 
     const  onCountryChange = async (e) => {
+        console.log('e ==> ', e.target.value)
         const code = e.target.value; 
         setCountry(code);
         const url = code === 'worldwide' ? 'https://disease.sh/v3/covid-19/all'
@@ -58,7 +59,9 @@ function Header() {
         .then(data => {
             setCountry(code)
             setCountryInfo(data);
-            setCenter([data.countryInfo.lat, data.countryInfo.long]);
+            if(data.countryInfo.lat && data.countryInfo.lon) {
+                setCenter([data.countryInfo.lat, data.countryInfo.long]);
+            }
             setZoom(4);
         })
     }
@@ -75,12 +78,14 @@ function Header() {
         <div className="header">
             <div className="logo">
                 <h2>COVID-19</h2>
-                <img src={virus} width="6%"/> <img src={mask} width="6%"/></div>
+                <img src={virus} width="6%"/> <img src={mask} width="6%"/>
+            </div>
             <FormControl className="app-dropdown">
             <Select
+            id="select"
             variant="outlined"
             value={country}
-            onChange={onCountryChange}
+            onChange={e => onCountryChange(e)}
             >
                 <MenuItem value="worldwide">Worldwide</MenuItem>
             {/* LOOP THROUGH all countries .. with state */}
@@ -90,32 +95,35 @@ function Header() {
             </Select>
         </FormControl>
         </div>
+        <div id="title">
+            <h1 id="total">Total</h1>
+            <div id="empty"></div>
+        </div>
         <div className="app-stats">
-            <Stats 
-            title="Current"
-            dailyCases={countryInfo.todayCases} 
-            //total={countryInfo.cases}
-            />
-            <Stats 
-            title="Recovered"
-            dailyCases={countryInfo.todayRecovered}
-            //total={countryInfo.recovered}
-            />
-            <Stats 
-            title="Deaths"
-            dailyCases={countryInfo.todayDeaths}
-            //total={countryInfo.deaths}
-            />            
+            <div>
+            <div id="stats">
+                <Stats 
+                title="Current"
+                dailyCases={countryInfo.todayCases} 
+                total={countryInfo.cases}
+                />
+                <Stats 
+                title="Recovered"
+                dailyCases={countryInfo.todayRecovered}
+                total={countryInfo.recovered}
+                />
+                <Stats 
+                title="Deaths"
+                dailyCases={countryInfo.todayDeaths}
+                total={countryInfo.deaths}
+                />      
+            </div>
+            <div className="line-chart">
+                <Line />
+            </div >
+            </div>      
             <Table />
         </div>
-        <div className="line-chart">
-                <Line />
-        </div >
-
-        <Worldmap 
-        countries={mapCountries}
-        center={center} 
-        zoom={zoom}/>
         </>
     )
 }

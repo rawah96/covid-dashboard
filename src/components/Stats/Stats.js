@@ -11,7 +11,8 @@ function Stats({title, dailyCases, total}) {
                     <Typography color="textSecondary" className="box-title">
                         {title}
                     </Typography>
-                    <h2 className="box-cases">{dailyCases}</h2>
+                    {/* <h2 className="box-cases"><small>Today:</small> {dailyCases}</h2> */}
+                    <h2 className="box-cases"> {total}</h2>
                 </CardContent>
             </Card>
         </div>

@@ -6,16 +6,14 @@
 
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-@media (max-width:990px) {
-
+    justify-content: space-between;
 }
 
 .app-dropdown {
-    width: 50vw;
+    /* width: 50vw; */
+    width: 680px;
+    margin-right: 90px !important;
 }
 
 .logo {
@@ -23,13 +21,49 @@
     justify-items: center;
 }
 
+.app-stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-stats > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .logo > h2 {
     margin:20px;
     font-size: 35px;
 }
-
 .line-chart {
-    position: relative;
+    /* position: relative;
     bottom:220px;
-    left: 45px;
+    left: 45px; */
+    width: 100%;  
+}
+
+.line-chart > * {
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    width: 100% !important;
+}
+
+#title {
+    display: flex;
+}
+
+#total {
+    flex: 0.68;
+    display: grid;
+    place-items: center;
+}
+
+#stats {
+    display: flex;
+}
+
+#select {
+    /* border: 1px solid rgba(255, 166, 0, 0.493); */
 }

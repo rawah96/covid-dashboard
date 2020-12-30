@@ -92,8 +92,8 @@ function LineChart({casesType ='cases'}) {
                             options={options}
                             data={{
                                 datasets: [{
-                                    backgroundColor: 'white',
-                                    borderColor:'lightgray',
+                                    backgroundColor: 'orange',
+                                    borderColor:'orange',
                                     data:data,
                                 }],
                             }}

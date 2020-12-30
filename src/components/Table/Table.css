@@ -22,7 +22,8 @@
 }
 
 .table tr:nth-of-type(odd) {
-    background-color:#f3f2f8;
+    /* background-color:#f3f2f8; */
+    background-color: rgba(255, 166, 0, 0.24);
 }
 
 .th {
