@@ -1,0 +1,115 @@
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+/* @preserve
+ * Leaflet 1.7.1, a JS library for interactive maps. http://leafletjs.com
+ * (c) 2010-2019 Vladimir Agafonkin, (c) 2010-2011 CloudMade
+ */
+
+/*!
+       * The buffer module from node.js, for the browser.
+       *
+       * @author   Feross Aboukhadijeh <http://feross.org>
+       * @license  MIT
+       */
+
+/*!
+ * Chart.js v2.9.3
+ * https://www.chartjs.org
+ * (c) 2019 Chart.js Contributors
+ * Released under the MIT License
+ */
+
+/*! @preserve
+ * numeral.js
+ * version : 2.0.6
+ * author : Adam Draper
+ * license : MIT
+ * http://adamwdraper.github.com/Numeral-js/
+ */
+
+/**
+ * A better abstraction over CSS.
+ *
+ * @copyright Oleg Isonen (Slobodskoi) / Isonen 2014-present
+ * @website https://github.com/cssinjs/jss
+ * @license MIT
+ */
+
+/** !
+     * @license FusionCharts JavaScript Library
+     * Copyright FusionCharts, Inc.
+     * License Information at <http://www.fusioncharts.com/license>
+     */
+
+/** !
+     * @license FusionCharts JavaScript Library - KDtree
+     * Copyright FusionCharts, Inc.
+     * License Information at <http://www.fusioncharts.com/license>
+     *
+     * @version //? write(JSON.parse(require('fs').readFileSync('./package.json')).version);
+     */
+
+/** @license React v0.19.1
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.13.1
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.13.1
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.13.1
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**!
+ * @license FusionCharts JavaScript Library
+ * Copyright FusionCharts, Inc.
+ * License Information at <http://www.fusioncharts.com/license>
+ *
+ * @author FusionCharts, Inc.
+ * @meta package_map_pack
+ * @id fusionmaps.World.20.10-30-2012 07:55:31
+ */
+
+/**!
+* @license FusionCharts JavaScript Library
+* Copyright FusionCharts, Inc.
+* License Information at <http://www.fusioncharts.com/license>
+*
+* @version 3.15.2
+*
+* @attributions (infers respective third-party copyrights)
+* Raphael 2.1.0 (modified as 'Red Raphael') <http://raphaeljs.com/license.html>
+* JSON v2 <http://www.JSON.org/js.html>
+* Firebug Lite 1.3.0 <http://getfirebug.com/firebuglite>
+*/
+
+//! moment.js
